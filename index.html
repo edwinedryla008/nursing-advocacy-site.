@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nursing with Precision: Advocating Safe Specialized Care</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #e0f7fa, #f5f5f5);
+      color: #333;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    header, section, footer {
+      padding: 5vw;
+      margin: 5vw auto;
+      max-width: 1000px;
+      background: white;
+      border-radius: 30px;
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+    }
+    header:hover, section:hover, footer:hover {
+      transform: scale(1.01);
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #a7d7ff, #d8f3ff);
+      text-align: center;
+      padding: 15vw 5vw;
+      border-radius: 30px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(255,255,255,0.3), transparent);
+      top: -100px;
+      left: -100px;
+      animation: pulse 5s infinite ease-in-out;
+      border-radius: 50%;
+      z-index: 0;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 0.7; }
+      50% { transform: scale(1.2); opacity: 0.5; }
+    }
+
+    .hero h1 {
+      font-size: 2.5em;
+      color: #002244;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 1;
+    }
+    .hero p {
+      font-size: 1.2em;
+      margin-top: 10px;
+      color: #444;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero .buttons {
+      margin-top: 20px;
+    }
+
+    .hero .buttons button {
+      background-color: #0066cc;
+      color: white;
+      border: none;
+      margin: 10px;
+      padding: 12px 24px;
+      font-size: 1em;
+      cursor: pointer;
+      border-radius: 30px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s, background-color 0.3s;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero .buttons button:hover {
+      background-color: #004c99;
+      transform: scale(1.05);
+    }
+
+    nav {
+      background-color: #004c99;
+      padding: 15px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      flex-wrap: wrap;
+    }
+    nav a {
+      display: inline-block;
+      color: white;
+      margin: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+      position: relative;
+    }
+
+    nav a:hover {
+      color: #ffeb3b;
+    }
+
+    nav a::after {
+      content: '';
+      display: block;
+      height: 3px;
+      background: #fff;
+      transition: width 0.3s;
+      width: 0;
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .section-title {
+      font-size: 2em;
+      color: #002244;
+      border-left: 8px solid #004c99;
+      padding-left: 20px;
+      margin-bottom: 30px;
+    }
+
+    .core-principles ul {
+      list-style-type: square;
+      padding-left: 20px;
+      font-size: 1em;
+    }
+
+    .resource-links a {
+      display: block;
+      margin: 15px 0;
+      padding: 12px 18px;
+      background: linear-gradient(135deg, #eef7ff, #dcefff);
+      border-left: 5px solid #0066cc;
+      text-decoration: none;
+      color: #003366;
+      font-weight: bold;
+      border-radius: 10px;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .resource-links a:hover {
+      background: #cce4ff;
+      color: #002244;
+    }
+
+    ul li {
+      margin: 14px 0;
+    }
+
+    .footer {
+      background: #f0f0f0;
+      text-align: center;
+      font-size: 1em;
+      padding: 30px;
+      border-top: 4px solid #ccc;
+      border-radius: 30px;
+    }
+
+    img.certificate {
+      width: 100%;
+      max-width: 100%;
+      display: block;
+      margin: 40px auto;
+      border: 4px solid #ccc;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    .social-links {
+      margin-top: 20px;
+    }
+
+    .social-links a {
+      margin: 0 10px;
+      color: #004c99;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+    .social-links a:hover {
+      color: #001a33;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2em;
+      }
+      .hero p {
+        font-size: 1em;
+      }
+      .section-title {
+        font-size: 1.5em;
+      }
+      nav a {
+        font-size: 1em;
+        margin: 8px;
+      }
+      .hero .buttons button {
+        padding: 10px 20px;
+        font-size: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#about">About the Advocacy</a>
+    <a href="#principles">Core Principles</a>
+    <a href="#resources">Resource Center</a>
+    <a href="#involved">Get Involved</a>
+    <a href="#certificate">Certificate</a>
+  </nav>
+
+  <header class="hero">
+    <h1>Precision in Practice: Advocating Excellence in Specialized Nursing Care</h1>
+    <p>Promoting competence, safety, and compassion in performing specialized nursing procedures.</p>
+    <div class="buttons">
+      <button onclick="location.href='#resources'">Learn Proper Techniques</button>
+      <button onclick="location.href='#involved'">Join the Advocacy</button>
+    </div>
+  </header>
+
+  <section id="about">
+    <h2 class="section-title">About the Advocacy</h2>
+    <p>Specialized nursing care is at the heart of patient recovery and well-being. This advocacy aims to highlight the importance of advanced training, up-to-date knowledge, and human connection in delivering such care. We focus on promoting standards that prioritize not just technical skill but ethical decision-making, empathy, and lifelong learning. Our goal is to inspire a generation of nurses who view every procedure as a moment of trust and excellence.</p>
+  </section>
+
+  <section class="core-principles" id="principles">
+    <h2 class="section-title">Core Principles</h2>
+    <ul>
+      <li><strong>Competency-Based Training:</strong> With hands-on workshops and simulated learning environments, we ensure nurses develop real-world confidence in complex procedures such as IV insertion, catheterization, and tracheostomy care.</li>
+      <li><strong>Patient Safety First:</strong> A zero-tolerance approach to protocol deviations, combined with robust infection control practices, documentation accuracy, and ethical judgment, ensures patient well-being at all times.</li>
+      <li><strong>Ongoing Education:</strong> We promote accredited CPD programs, expert webinars, and online learning communities to help nurses stay ahead in evolving healthcare practices.</li>
+      <li><strong>Technology Integration:</strong> The use of digital documentation systems, clinical decision support tools, and telehealth platforms enhances accuracy, efficiency, and connectivity in specialized care.</li>
+      <li><strong>Empathy in Action:</strong> Beyond the procedure is the person. We empower nurses to communicate clearly, listen actively, and build rapport, ensuring care is always compassionate and personalized.</li>
+    </ul>
+  </section>
+
+  <section class="resource-links" id="resources">
+    <h2 class="section-title">Resource Center</h2>
+    <a href="#">Watch video demonstrations of specialized nursing procedures</a>
+    <a href="#">Download updated care protocols (DOH, WHO, Local Hospitals)</a>
+    <a href="#">Use printable aseptic technique checklists for daily nursing routines</a>
+    <a href="#">Explore real case studies and peer-reviewed evidence-based articles</a>
+  </section>
+
+  <section id="involved">
+    <h2 class="section-title">Get Involved</h2>
+    <ul>
+      <li>Sign up as an advocate and become a voice for skilled and ethical nursing care.</li>
+      <li>Enroll in refresher courses or mentoring sessions to enhance your practice.</li>
+      <li>Share your personal journey in nursing and how you champion specialized care.</li>
+      <li>Volunteer to guide junior nurses and new graduates in high-risk clinical areas.</li>
+    </ul>
+  </section>
+
+  <section id="certificate">
+    <h2 class="section-title">Certificate of Completion</h2>
+    <img src="TESDA CERTIFICATE.png" alt="TESDA Certificate" class="certificate">
+  </section>
+
+  <footer class="footer">
+    <p>Connect with me</p>
+    <div class="social-links">
+      <a href="https://ph.linkedin.com/in/arabela-chariz-arroyo-25a2b9367" target="_blank">LinkedIn</a>
+    </div>
+    <p><em>This site promotes safe practices but does not replace professional training.</em></p>
+  </footer>
+</body>
+</html>
